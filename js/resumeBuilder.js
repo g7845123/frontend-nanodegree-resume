@@ -77,12 +77,6 @@ var projects = {
     ]
 };
 
-displayBio();
-displayWork();
-displayProject();
-displayEducation();
-$("#mapDiv").append(googleMap);
-
 function addContacts(selector) {
   var formattedMobile = HTMLmobile.replace("%data%", bio.contacts["mobile number"]);
   $(selector).append(formattedMobile);
@@ -96,7 +90,7 @@ function addContacts(selector) {
   $(selector).append(formattedLocation);
 }
 
-function displayBio() {
+bio.display = function () {
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
   $("#header").prepend(formattedRole);
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -116,7 +110,7 @@ function displayBio() {
   }
 }
 
-function displayWork() {
+work.display = function () {
   for (job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -132,7 +126,7 @@ function displayWork() {
   }
 }
 
-function displayProject() {
+projects.display = function () {
   for (project in projects.projects) {
     $("#projects").append(HTMLprojectStart);
     var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -151,7 +145,7 @@ function displayProject() {
   }
 }
 
-function displayEducation() {
+education.display = function () {
   for (school in education.schools) {
     $("#education").append(HTMLschoolStart);
     var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -180,3 +174,9 @@ function displayEducation() {
     $(".education-entry:last").append(formattedUrl);
   }
 }
+
+bio.display();
+work.display();
+projects.display();
+education.display();
+$("#mapDiv").append(googleMap);
