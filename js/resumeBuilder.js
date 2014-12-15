@@ -7,7 +7,7 @@ var bio = {
         "email": "g7845123@gmail.com",
         "github": "g7845123",
         "blog": "Under construction",
-        "location": "Hefei, Anhui, China"
+        "location": "Deyang, Sichuan, China"
     },
     "skills": [
         "Python (Familiar)", "HTML (Know about)", "CSS (Know about)", "JavaScript (Know about)"
@@ -81,6 +81,7 @@ displayBio();
 displayWork();
 displayProject();
 displayEducation();
+$("#mapDiv").append(googleMap);
 
 function addContacts(selector) {
   var formattedMobile = HTMLmobile.replace("%data%", bio.contacts["mobile number"]);

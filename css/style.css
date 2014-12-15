@@ -148,6 +148,9 @@ ul {
 
 img {
   padding: 10px;
+}
+
+.project-img {
   max-width: 90%;
   height: auto;
 }
