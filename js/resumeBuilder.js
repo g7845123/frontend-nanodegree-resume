@@ -1,7 +1,7 @@
 var bio = {
     "name": "Cheng Guo",
     "role": "Graduate Student",
-    "welcomeMessage": "Hi, I'm learning web development in my spare time. Contact me if you have any advice or project opportunities.",
+    "welcomeMessage": "Hi, this resume is an assigment of Udacity course. And will not be updated",
     "contacts": {
         "mobile number": "+86-15555156707",
         "email": "g7845123@gmail.com",

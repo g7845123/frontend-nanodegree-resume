@@ -1,2 +1,0 @@
-1. Udacity resume template (https://github.com/udacity/frontend-nanodegree-resume)
-2. Google Maps API (https://developers.google.com/maps/)
